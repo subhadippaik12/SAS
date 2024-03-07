@@ -1,6 +1,6 @@
 To start :
-# npm i
-# npm start
+npm i
+npm start
 
 This is an automated Supermarket system. It contains role based authentication with different functionalities for customer and manager. The website handles all the basic requirements from adding orders for customers to checking sales statistics by manager.
 
