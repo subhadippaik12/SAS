@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const response = require('./foodData2.json');
+const response2 = require('./foodCategory.json');
 const { Schema } = mongoose;
 
 const connectMongo = async (mongoURL) => {
@@ -7,13 +9,13 @@ const connectMongo = async (mongoURL) => {
     .then(async () => {
       console.log('Database is connected');
 
-      const foodSchema = new Schema({}, { strict: false });
+      //const foodSchema = new Schema({}, { strict: false });
 
-      const foodModel = mongoose.model('food_items', foodSchema);
-      const response = await foodModel.find({});
+      //const foodModel = mongoose.model('food_items', foodSchema);
+      //const response = await foodModel.find({});
 
-      const categoryModel = mongoose.model('food_categories', foodSchema);
-      const response2 = await categoryModel.find({});
+      //const categoryModel = mongoose.model('food_categories', foodSchema);
+      //const response2 = await categoryModel.find({});
 
       global.food_items = response;
       global.foodCategory = response2;
